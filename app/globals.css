@@ -3,6 +3,46 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --white: var(--off-white);
+  --primary: #0d0033;
+  --blue-2: #3301cc;
+  --primary-700: #260199;
+  --midnight-blue: #1b0e6d00;
+  --blue: #3f00ff;
+  --pale-blue: #eef4f8;
+  --black: black;
+  --green: #3ecf83;
+  --light-green: #39ee8e;
+  --cs-purple: #6720fe;
+  --orange: #f90;
+  --yellow: gold;
+  --gray--900: #252525;
+  --dark-grey: #323232;
+  --blue-button: #3f1aff;
+  --border-grey: #c9c9c9;
+  --body-font: "Geomanist regular", sans-serif;
+  --heading-font: "Geomanist bold", sans-serif;
+  --primary--500: #4001ff;
+  --orange-2: #ff9901;
+  --secondary--500: #3dce83;
+  --navy: #1a0066;
+  --off-white: #fbfcfd;
+  --primary--200: #b399ff;
+  --grey: #fafafa;
+  --primary--100: var(--primary--50-501);
+  --midnight-blue-2: #251e41;
+  --dim-grey: #707070;
+  --modal-background: #4001ffcc;
+  --blue-3: #6320ee;
+  --primary--50-501: #ece5ff;
+  --transparent: var(--_rich-text-style-2025---transparent);
+  --off-black: #161616;
+  --_rich-text-style-2025---transparent: #0000;
+  --_rich-text-style-2025---blue: var(--blue-button);
+  --_rich-text-style-2025---font-family: Arial, "Helvetica Neue", Helvetica,
+    sans-serif;
+  --electric-blue: #008afc;
+  --primay--800: #1a0066;
 }
 
 @theme inline {
@@ -20,7 +60,8 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
 }
