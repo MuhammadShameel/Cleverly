@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
 :root {
+  --font-geomanist: "Geomanist regular", sans-serif;
+
   --background: #ffffff;
   --foreground: #171717;
   --white: var(--off-white);
@@ -20,8 +22,8 @@
   --dark-grey: #323232;
   --blue-button: #3f1aff;
   --border-grey: #c9c9c9;
-  --body-font: "Geomanist regular", sans-serif;
-  --heading-font: "Geomanist bold", sans-serif;
+  --body-font: var(--font-geomanist);
+  --heading-font: var(--font-geomanist);
   --primary--500: #4001ff;
   --orange-2: #ff9901;
   --secondary--500: #3dce83;
@@ -64,4 +66,108 @@ body {
   font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 20px;
+}
+
+p {
+  font-family: var(--body-font);
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font), sans-serif;
+}
+
+h1 {
+  color: var(--white);
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+h2 {
+  color: var(--black);
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+h4 {
+  color: var(--black);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@media (max-width: 991px) {
+  h2 {
+    font-size: 2.1875rem;
+  }
+}
+
+@media (max-width: 767px) {
+  p {
+    font-size: 1.125rem;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.125rem;
+  }
+}
+
+.btn {
+  text-align: center;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  border-radius: 16px;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 0%;
+  padding: 18px 32px 17px;
+  font-family: Geomanist bold, sans-serif;
+  font-size: 1.1875rem;
+  line-height: 1;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 3.2px 6px #0006;
+}
+
+.btn-primary {
+  background: var(--primary--500);
+  color: var(--white);
+  border: none;
+}
+
+.nav-link {
+  font-family: var(--body-font);
+  color: var(--black);
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 18px 32px 17px;
+  font-size: clamp(14px, 1.319vw, 19px);
+  font-weight: 700;
+  line-height: 26.6px;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  display: flex;
 }
