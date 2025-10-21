@@ -171,3 +171,9 @@ h4 {
   transition-timing-function: ease;
   display: flex;
 }
+
+/* Section  */
+
+.hero-section {
+  background-color: linear-gradient(#0d0033, #3301cc) !important;
+}

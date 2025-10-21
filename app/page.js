@@ -1,5 +1,10 @@
-import Image from "next/image";
+import React from "react";
+import HeroSection from "./components/HeroSection";
 
 export default function Home() {
-  return <></>;
+  return (
+    <>
+      <HeroSection />
+    </>
+  );
 }
