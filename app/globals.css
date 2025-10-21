@@ -136,6 +136,7 @@ h4 {
 .btn {
   text-align: center;
   letter-spacing: 0.02em;
+  font-weight: 700;
   cursor: pointer;
   border-radius: 16px;
   flex-flow: column;
@@ -157,6 +158,12 @@ h4 {
   border: none;
 }
 
+.btn-orange {
+  background: var(--orange);
+  color: var(--white);
+  border: none;
+}
+
 .nav-link {
   font-family: var(--body-font);
   color: var(--black);
@@ -174,6 +181,6 @@ h4 {
 
 /* Section  */
 
-.hero-section {
+/* .hero-section {
   background-color: linear-gradient(#0d0033, #3301cc) !important;
-}
+} */
