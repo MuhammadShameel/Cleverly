@@ -7,7 +7,7 @@ import LinkedIn from "../../public/images/linkedIn.png";
 const Footer = () => {
   return (
     <>
-      <footer className="text-gray-600 body-font my-10">
+      <footer className="text-gray-600 body-font my-10 ">
         <div className="container px-5 py-5 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
           {/* <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
             <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
@@ -30,7 +30,7 @@ const Footer = () => {
             </p>
           </div> */}
           <div className="flex-grow flex flex-wrap  -mb-10 md:text-left text-center justify-center order-first">
-            <div className="lg:w-1/6 md:w-1/2 w-full px-4">
+            <div className="lg:w-1/4 md:w-1/2 w-full px-4">
               <nav className="list-none mb-10">
                 <li className="mb-4">
                   <a className="text-[#4b4b4b] hover:text-gray-800">
@@ -54,7 +54,7 @@ const Footer = () => {
                 </li>
               </nav>
             </div>
-            <div className="lg:w-1/6 md:w-1/2 w-full px-4">
+            <div className="lg:w-1/4 md:w-1/2 w-full px-4">
               <nav className="list-none mb-10">
                 <li className="mb-4">
                   <a className="text-[#4b4b4b] hover:text-gray-800">
@@ -78,7 +78,7 @@ const Footer = () => {
                 </li>
               </nav>
             </div>
-            <div className="lg:w-1/6 md:w-1/2 w-full px-4">
+            <div className="lg:w-1/4 md:w-1/2 w-full px-4">
               <nav className="list-none mb-10">
                 <li className="mb-4">
                   <a className="text-[#4b4b4b] hover:text-gray-800">FAQs</a>
@@ -94,7 +94,7 @@ const Footer = () => {
                 </li>
               </nav>
             </div>
-            <div className="lg:w-1/6 md:w-1/2 w-75 text-center px-4">
+            <div className="lg:w-1/4 md:w-1/2 w-75 text-center px-4">
               <nav className="list-none mb-10 bg-[#fafafa] p-6 rounded-md ">
                 <li className="mb-4 flex items-center">
                   <Image
