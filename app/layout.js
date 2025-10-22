@@ -4,25 +4,56 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 const geomanist = localFont({
   src: [
+    // Correct paths relative to the 'app' directory
     {
-      path: "../public/assets/fonts/Geomanist-Regular.otf",
-      weight: "400",
-      style: "regular",
+      path: "../public/assets/fonts/GeomanistThin.ttf",
+      weight: "100",
+      style: "normal",
     },
+    {
+      path: "../public/assets/fonts/GeomanistExtraLight.ttf",
+      weight: "200",
+      style: "normal",
+    },
+    {
+      path: "../public/assets/fonts/GeomanistLight.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../public/assets/fonts/GeomanistBook.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/assets/fonts/GeomanistRegular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/assets/fonts/GeomanistMedium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/assets/fonts/GeomanistBold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../public/assets/fonts/GeomanistBlack.ttf",
+      weight: "900",
+      style: "normal",
+    },
+    {
+      path: "../public/assets/fonts/GeomanistUltra.ttf",
+      weight: "900",
+      style: "normal",
+    }, // 900 is the max standard weight
   ],
-  variable: "--font-geomanist",
+  variable: "--font-geomanist", // This variable now represents the whole family
   display: "swap",
 });
 
@@ -34,9 +65,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geomanist.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={` ${geomanist.variable} antialiased`}>
         <Navbar />
         {children}
         <Footer />

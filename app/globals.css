@@ -22,8 +22,8 @@
   --dark-grey: #323232;
   --blue-button: #3f1aff;
   --border-grey: #c9c9c9;
-  --body-font: var(--font-geomanist);
-  --heading-font: var(--font-geomanist);
+  --body-font: var(--font-geomanist), sans-serif;
+  --heading-font: var(--font-geomanist), sans-serif;
   --primary--500: #4001ff;
   --orange-2: #ff9901;
   --secondary--500: #3dce83;
@@ -56,7 +56,8 @@
 
 body {
   color: #333;
-  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-family: var(--body-font);
+  font-weight: 400;
   font-size: 14px;
   line-height: 20px;
 }
@@ -73,7 +74,21 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--heading-font), sans-serif;
+  font-family: var(--heading-font) !important;
+  font-weight: 700;
+}
+
+.font-thin {
+  font-weight: 100; /* Uses Geomanist-Thin */
+}
+.font-light {
+  font-weight: 300; /* Uses Geomanist-Light */
+}
+.font-medium {
+  font-weight: 500; /* Uses Geomanist-Medium */
+}
+.font-black {
+  font-weight: 900; /* Uses Geomanist-Black or Geomanist-Ultra */
 }
 
 h1 {
