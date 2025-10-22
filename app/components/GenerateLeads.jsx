@@ -20,7 +20,7 @@ const GenerateLeads = () => {
               your sales funnel.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-6 my-10">
             <div className="flex flex-col items-center text-center py-6 px-6">
               <Image
                 src={Search}
@@ -85,7 +85,7 @@ const GenerateLeads = () => {
             </div>
           </div>
           <div className="btn-wrapper text-center">
-            <button className="btn btn-secondary mt-10">
+            <button className="btn btn-secondary mt-5">
               Free Consultation
             </button>
           </div>
