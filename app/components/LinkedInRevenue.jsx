@@ -1,10 +1,4 @@
 import React from "react";
-import Image from "next/image";
-
-import Search from "../../public/images/card-search.png";
-import Write from "../../public/images/write.png";
-import Internet from "../../public/images/internet.png";
-import Deal from "../../public/images/deal.png";
 
 const LinkedInRevenue = () => {
   return (
@@ -26,7 +20,7 @@ const LinkedInRevenue = () => {
               calendar.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-16 py-6 mt-10">
+          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-16 py-6 my-10">
             <div className="flex flex-col items-center text-center py-7 px-7 rounded-sm shadow-[0_1.49px_5px_#7d6ba40d,_0_12.06px_17.87px_#6320ee05,_0_22.56px_33.42px_#6320ee05,_0_1.49px_2.21px_#7d6ba40d] bg-gradient-to-b from-[#fdfcff] to-[#faf8ff] border border-solid border-[#eff3f6]">
               <svg
                 width="47"
@@ -329,7 +323,7 @@ const LinkedInRevenue = () => {
             </div>
           </div>
           <div className="btn-wrapper text-center">
-            <button className="btn btn-secondary mt-10">
+            <button className="btn btn-secondary mt-5">
               Free Consultation
             </button>
           </div>
