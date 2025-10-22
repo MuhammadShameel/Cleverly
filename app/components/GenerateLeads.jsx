@@ -11,7 +11,7 @@ const GenerateLeads = () => {
     <>
       <section className="bg-[#f3f6ff] py-20 lg:px-5 md:px-4 px-3">
         <div className="container mx-auto">
-          <div className="text-center mx-auto max-w-3xl">
+          <div className="text-center mx-auto max-w-4xl">
             <h2>How we generate leads for clients</h2>
             <p className="mt-5">
               We leverage high performing data from executing thousands of
@@ -20,8 +20,8 @@ const GenerateLeads = () => {
               your sales funnel.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
-            <div className="flex flex-col items-center text-center py-6 px-6 max-w-72">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-6">
+            <div className="flex flex-col items-center text-center py-6 px-6">
               <Image
                 src={Search}
                 alt="Placeholder"
@@ -37,7 +37,7 @@ const GenerateLeads = () => {
               </p>
             </div>
 
-            <div className="flex flex-col items-center text-center py-6 px-6 max-w-72">
+            <div className="flex flex-col items-center text-center py-6 px-6">
               <Image
                 src={Write}
                 alt="Placeholder"
@@ -53,7 +53,7 @@ const GenerateLeads = () => {
               </p>
             </div>
 
-            <div className="flex flex-col items-center text-center py-6 px-6 max-w-72">
+            <div className="flex flex-col items-center text-center py-6 px-6">
               <Image
                 src={Internet}
                 alt="Placeholder"
@@ -68,7 +68,7 @@ const GenerateLeads = () => {
               </p>
             </div>
 
-            <div className="flex flex-col items-center text-center py-6 px-6 max-w-72">
+            <div className="flex flex-col items-center text-center py-6 px-6">
               <Image
                 src={Deal}
                 alt="Placeholder"
