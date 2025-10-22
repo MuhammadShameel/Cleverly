@@ -6,7 +6,7 @@ import Stars from "../../public/images/stars.png";
 const HeroSection = () => {
   return (
     <>
-      <section className="hero-section bg-gradient-to-b from-[#0d0033] to-[#3301cc] py-20 text-white">
+      <section className="hero-section bg-gradient-to-b from-[#0d0033] to-[#3301cc] py-20 text-white lg:px-5 md:px-4 px-3">
         <div className="container mx-auto">
           <div className="text-center mx-auto">
             <div className="content-wrapper">

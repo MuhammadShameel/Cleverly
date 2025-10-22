@@ -158,12 +158,19 @@ h4 {
   border: none;
 }
 
+.btn-secondary {
+  background: var(--green);
+  color: var(--white);
+  border: none;
+}
+
 .btn-orange {
   background: var(--orange);
   color: var(--white);
   border: none;
 }
 
+/* Section  */
 .nav-link {
   font-family: var(--body-font);
   color: var(--black);
@@ -178,9 +185,6 @@ h4 {
   transition-timing-function: ease;
   display: flex;
 }
-
-/* Section  */
-
 /* .hero-section {
   background-color: linear-gradient(#0d0033, #3301cc) !important;
 } */
