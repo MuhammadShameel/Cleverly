@@ -31,7 +31,7 @@ const Packages = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-6 py-6 my-10">
-            <div className="flex flex-col items-center text-center  mx-auto p-12 bg-white">
+            <div className="flex flex-col items-center text-center  mx-auto p-12 bg-white rounded-lg">
               <h3 className="mb-2 text-[#3f00ff] !font-bold">Silver</h3>
               <span className="uppercase font-bold text-[16px] text-black">
                 LINKEDIN OUTREACH + Proven sales expert
@@ -64,7 +64,7 @@ const Packages = () => {
                 </button>
               </div>
             </div>
-            <div className="flex flex-col items-center text-center  mx-auto p-12 bg-white">
+            <div className="flex flex-col items-center text-center  mx-auto p-12 bg-white rounded-lg">
               <h3 className="mb-2 text-[#3f00ff] !font-bold">Gold</h3>
               <span className="uppercase font-bold text-[16px] text-black">
                 LINKEDIN OUTREACH + Proven sales expert
@@ -97,7 +97,7 @@ const Packages = () => {
                 </button>
               </div>
             </div>
-            <div className="flex flex-col items-center text-center  mx-auto p-12 bg-white">
+            <div className="flex flex-col items-center text-center  mx-auto p-12 bg-white rounded-lg">
               <h3 className="mb-2 text-[#3f00ff] !font-bold">Platinum</h3>
               <span className="uppercase font-bold text-[16px] text-black">
                 LINKEDIN OUTREACH + Proven sales expert
