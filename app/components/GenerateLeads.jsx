@@ -30,8 +30,8 @@ const GenerateLeads = () => {
                 height={24}
                 unoptimized={true}
               />
-              <h3 className="mb-2 !font-bold">1. Find Prospects</h3>
-              <p className="text-gray-600 !text-[16px]">
+              <h4 className="mb-2">1. Find Prospects</h4>
+              <p className="text-gray-600 text-[16px]!">
                 We build targeted and qualified lists of your ideal prospects on
                 LinkedIn
               </p>
@@ -46,8 +46,8 @@ const GenerateLeads = () => {
                 height={24}
                 unoptimized={true}
               />
-              <h3 className="mb-2 !font-bold">2. Write Messages</h3>
-              <p className="text-gray-600 !text-[16px]">
+              <h4 className="mb-2">2. Write Messages</h4>
+              <p className="text-gray-600 text-[16px]!">
                 We write clear, personal cold outreach messages that actually
                 get responses
               </p>
@@ -62,8 +62,8 @@ const GenerateLeads = () => {
                 height={24}
                 unoptimized={true}
               />
-              <h3 className="mb-2 !font-bold">3. Execute Outreach</h3>
-              <p className="text-gray-600 !text-[16px]">
+              <h4 className="mb-2">3. Execute Outreach</h4>
+              <p className="text-gray-600 text-[16px]!">
                 We send custom messages to thousands of your ideal prospects
               </p>
             </div>
@@ -77,8 +77,8 @@ const GenerateLeads = () => {
                 height={24}
                 unoptimized={true}
               />
-              <h3 className="mb-2 !font-bold">4. Close Deals</h3>
-              <p className="text-gray-600 !text-[16px]">
+              <h4 className="mb-2">4. Close Deals</h4>
+              <p className="text-gray-600 text-[16px]!">
                 You're instantly notified when leads respond, for you to close
                 the deal
               </p>

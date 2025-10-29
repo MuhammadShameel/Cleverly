@@ -8,12 +8,14 @@ import LinkedInSales from "./components/LinkedInSales";
 import Packages from "./components/Packages";
 import FooterBanner from "./components/FooterBanner.jsx";
 import Testimonial from "./components/Testimonial";
+import CaseStudySlider from "./components/CaseStudySlider";
 
 export default function Home() {
   return (
     <>
       <HeroSection />
       <Testimonial />
+      <CaseStudySlider />
       <GenerateLeads />
       <LinkedInRevenue />
       <LinkedInMarketing />

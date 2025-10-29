@@ -53,7 +53,7 @@ const images = [
 
 export default function SwiperMarquee() {
   return (
-    <section className="marquee w-full py-10">
+    <section className="marquee w-full pt-10">
       <Swiper
         // Swiper modules
         modules={[Autoplay]}
@@ -79,13 +79,13 @@ export default function SwiperMarquee() {
       >
         {images.map((imageSrc, index) => (
           <SwiperSlide key={index} style={{ width: "auto" }}>
-            <div className="img-wrapper h-[80px] flex-shrink-0 mx-7">
+            <div className="img-wrapper h-20 shrink-0 mx-7">
               <Image
                 src={imageSrc}
                 alt={`marquee-image-${index}`}
                 width={120}
                 height={80}
-                className="rounded-md object-contain w-full h-full"
+                className="rounded-md object-contain w-full h-[100px]!"
                 unoptimized={true} // Add if using external URLs that aren't configured in next.config.js
               />
             </div>

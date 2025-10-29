@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* /app/globals.css */
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+
 :root {
   --font-geomanist: "Geomanist regular", sans-serif;
 
@@ -45,6 +50,7 @@
     sans-serif;
   --electric-blue: #008afc;
   --primay--800: #1a0066;
+  --swiper-theme-color: var(--primary--500) !important;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -60,6 +66,12 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+}
+
+img {
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
 }
 
 p {
@@ -105,7 +117,7 @@ h2 {
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 700;
   line-height: 30px;
 }
@@ -201,6 +213,26 @@ h4 {
   transition-timing-function: ease;
   display: flex;
 }
-/* .hero-section {
-  background-color: linear-gradient(#0d0033, #3301cc) !important;
-} */
+
+.profile-img-wrapper {
+  background-image: linear-gradient(#4000ff, #dcd1ff) !important;
+  border-radius: 20px;
+  flex: none;
+  justify-content: center;
+  align-items: center;
+  width: 106px;
+  height: 106px;
+  padding: 3px;
+  display: flex;
+  overflow: clip;
+}
+
+.slider-card {
+  background-image: linear-gradient(#fdfcff, #faf8ff);
+  border: 1px solid #eff3f6;
+  box-shadow: 0 1.49px 2.21px #7d6ba40d, 0 3.59px 4.32px #a38ad70a !important;
+}
+
+.marquee .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
