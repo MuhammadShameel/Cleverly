@@ -58,6 +58,10 @@
   }
 }
 
+.font-geomanist {
+  font-family: var(--font-geomanist), sans-serif !important;
+}
+
 body {
   color: #333;
   font-family: var(--body-font) !important;

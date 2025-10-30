@@ -241,7 +241,7 @@ const Navbar = () => {
 
   return (
     // nav is sticky, z-50 (on top), with a white background
-    <nav className="sticky top-0 left-0 right-0 z-50 bg-white shadow-md">
+    <nav className="sticky top-0 left-0 right-0 z-50 bg-white shadow-md font-geomanist">
       <div className="container mx-auto">
         <div className="flex justify-between items-center py-2">
           {/* === Logo === */}
@@ -264,7 +264,7 @@ const Navbar = () => {
                     <>
                       <Link
                         href={link.href}
-                        className="nav-link px-[12.8px]! py-3.5 flex items-center gap-1.5 transition-colors duration-200 rounded-[20px] group-hover:bg-[#4001ff] group-hover:text-white!"
+                        className="nav-link  px-[12.8px]! py-3.5 flex items-center gap-1.5 transition-colors duration-200 rounded-[20px] group-hover:bg-[#4001ff] group-hover:text-white!"
                       >
                         {link.text}
                         {/* <DropdownArrowIcon className="w-4 h-4 transition-transform group-hover:rotate-180" /> */}
