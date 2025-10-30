@@ -6,8 +6,6 @@
 @import "swiper/css/pagination";
 
 :root {
-  --font-geomanist: "Geomanist regular", sans-serif;
-
   --background: #ffffff;
   --foreground: #171717;
   --white: var(--off-white);
@@ -62,7 +60,7 @@
 
 body {
   color: #333;
-  font-family: var(--body-font);
+  font-family: var(--body-font) !important;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;

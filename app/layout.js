@@ -8,47 +8,47 @@ const geomanist = localFont({
   src: [
     // Correct paths relative to the 'app' directory
     {
-      path: "../public/assets/fonts/GeomanistThin.ttf",
+      path: "./assets/fonts/GeomanistThin.ttf",
       weight: "100",
       style: "normal",
     },
     {
-      path: "../public/assets/fonts/GeomanistExtraLight.ttf",
+      path: "./assets/fonts/GeomanistExtraLight.ttf",
       weight: "200",
       style: "normal",
     },
     {
-      path: "../public/assets/fonts/GeomanistLight.ttf",
+      path: "./assets/fonts/GeomanistLight.ttf",
       weight: "300",
       style: "normal",
     },
     {
-      path: "../public/assets/fonts/GeomanistBook.ttf",
+      path: "./assets/fonts/GeomanistBook.ttf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../public/assets/fonts/GeomanistRegular.ttf",
+      path: "./assets/fonts/GeomanistRegular.ttf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../public/assets/fonts/GeomanistMedium.ttf",
+      path: "./assets/fonts/GeomanistMedium.ttf",
       weight: "500",
       style: "normal",
     },
     {
-      path: "../public/assets/fonts/GeomanistBold.ttf",
+      path: "./assets/fonts/GeomanistBold.ttf",
       weight: "700",
       style: "normal",
     },
     {
-      path: "../public/assets/fonts/GeomanistBlack.ttf",
+      path: "./assets/fonts/GeomanistBlack.ttf",
       weight: "900",
       style: "normal",
     },
     {
-      path: "../public/assets/fonts/GeomanistUltra.ttf",
+      path: "./assets/fonts/GeomanistUltra.ttf",
       weight: "900",
       style: "normal",
     }, // 900 is the max standard weight
