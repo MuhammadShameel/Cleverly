@@ -6,11 +6,11 @@ import Stars from "../../public/images/stars.png";
 const HeroSection = () => {
   return (
     <>
-      <section className="hero-section bg-gradient-to-b from-[#0d0033] to-[#3301cc] py-20 text-white lg:px-5 md:px-4 px-3">
+      <section className="hero-section bg-linear-to-b from-[#0d0033] to-[#3301cc] py-20 text-white lg:px-5 md:px-4 px-3">
         <div className="container mx-auto">
           <div className="text-center mx-auto">
             <div className="content-wrapper">
-              <h1 className="py-3 font-bold max-w-4xl mx-auto">
+              <h1 className="py-3 font-bold max-w-4xl mx-auto font-geomanist">
                 Scale your leads on LinkedIn and get B2B meetings that turn into
                 predictable revenue, done-for-you.
               </h1>
@@ -21,7 +21,7 @@ const HeroSection = () => {
               </p>
             </div>
             <div className="mt-20 text-center mx-auto flex flex-col justify-center items-center">
-              <p className="!text-[14px]">#1 LinkedIn Lead Generation Agency</p>
+              <p className="text-[14px]!">#1 LinkedIn Lead Generation Agency</p>
               <button className="btn btn-orange my-3">Free Consultaion</button>
               <Image src={Stars} alt="" width={200} height={200} />
               <ul className="lg:flex md:flex-row flex-col gap-10 pt-10">
