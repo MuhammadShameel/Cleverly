@@ -1,13 +1,16 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 export default function VideoPlayer({ videoUrl, thumbnail }) {
-  const [showVideo, setShowVideo] = useState(false);
-  const iframeRef = useRef(null);
+  const [showModal, setShowModal] = useState(false);
 
   const handlePlayClick = () => {
-    setShowVideo(true);
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
   };
 
   // Extract video ID from Vimeo URL
@@ -22,51 +25,72 @@ export default function VideoPlayer({ videoUrl, thumbnail }) {
     : "";
 
   return (
-    <div className="video-container relative aspect-video w-full overflow-hidden rounded-lg bg-black">
-      {showVideo ? (
-        <div className="w-full h-full">
-          <iframe
-            ref={iframeRef}
-            src={embedUrl}
-            className="w-full h-full"
-            frameBorder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-        </div>
-      ) : (
-        <>
-          {/* Thumbnail */}
-          <div
-            className="w-full h-full bg-cover bg-center"
-            style={{ backgroundImage: `url(${thumbnail})` }}
-          />
+    <>
+      {/* Thumbnail with Play Button */}
+      <div className="video-container relative aspect-video w-full overflow-hidden rounded-lg bg-black cursor-pointer">
+        <div
+          className="w-full h-full bg-cover bg-center"
+          style={{ backgroundImage: `url(${thumbnail})` }}
+        />
 
-          {/* Play Button Overlay */}
-          <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+        {/* Play Button Overlay */}
+        <div
+          className="absolute inset-0 bg-black/30 flex items-center justify-center"
+          onClick={handlePlayClick}
+        >
+          <button
+            className="play-button bg-white/90 hover:bg-white rounded-full w-16 h-16 md:w-20 md:h-20 flex items-center justify-center transition-all duration-300 hover:scale-110 group"
+            aria-label="Play video"
+          >
+            <svg
+              className="w-6 h-6 md:w-8 md:h-8 text-blue-600 ml-1 group-hover:text-blue-700 transition-colors"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      {/* Video Modal */}
+      {showModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm">
+          <div className="relative w-full max-w-4xl mx-4">
+            {/* Close Button */}
             <button
-              onClick={handlePlayClick}
-              className="play-button bg-white/90 hover:bg-white rounded-full w-16 h-16 md:w-20 md:h-20 flex items-center justify-center transition-all duration-300 hover:scale-110 group"
-              aria-label="Play video"
+              onClick={handleCloseModal}
+              className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors z-10"
+              aria-label="Close video"
             >
               <svg
-                className="w-6 h-6 md:w-8 md:h-8 text-blue-600 ml-1 group-hover:text-blue-700 transition-colors"
-                fill="currentColor"
+                className="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
                 viewBox="0 0 24 24"
               >
-                <path d="M8 5v14l11-7z" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             </button>
-          </div>
 
-          {/* Loading indicator for when video is loading */}
-          {showVideo && (
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+            {/* Video Container */}
+            <div className="relative aspect-video w-full bg-black rounded-lg overflow-hidden">
+              <iframe
+                src={embedUrl}
+                className="w-full h-full"
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </div>
-          )}
-        </>
+          </div>
+        </div>
       )}
-    </div>
+    </>
   );
 }
