@@ -202,7 +202,7 @@ const CaseStudySlider = () => {
 
   return (
     <>
-      <section className="pb-20">
+      <section className="pb-20 overflow-x-hidden">
         <div className="lg:px-5 md:px-4 px-3 ">
           <div className="container mx-auto">
             <div className="text-center max-w-4xl mx-auto">
@@ -219,12 +219,12 @@ const CaseStudySlider = () => {
                 onSwiper={setSwiper}
                 modules={[Navigation, Pagination, Autoplay]}
                 onSlideChange={(s) => setActiveIndex(s.realIndex)}
-                spaceBetween={30}
+                spaceBetween={20}
+                centeredSlides={true}
                 autoplay={{
                   delay: 3000,
                   disableOnInteraction: false,
                 }}
-                loop={true}
                 navigation={{
                   nextEl: ".swiper-button-next",
                   prevEl: ".swiper-button-prev",
@@ -246,14 +246,14 @@ const CaseStudySlider = () => {
                   },
                   1024: {
                     slidesPerView: 1,
-                    spaceBetween: 20,
+                    spaceBetween: 60,
                   },
                   1280: {
                     slidesPerView: 1,
-                    spaceBetween: 20,
+                    spaceBetween: 60,
                   },
                 }}
-                className="custom-swiper-container"
+                className="custom-swiper-container overflow-visible!"
               >
                 {projects.map((project, index) => (
                   <SwiperSlide key={index}>
