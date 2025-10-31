@@ -5,7 +5,6 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-// --- Reusable SVG Components ---
 const CloseIcon = ({ ...props }) => (
   <svg
     width="24"
@@ -87,7 +86,6 @@ const DropdownArrowIcon = () => (
     />
   </svg>
 );
-// --- End of SVG Components ---
 
 const IconLinkedInLead = (props) => (
   <svg
@@ -182,7 +180,6 @@ const navLinks = [
   { id: 5, text: "Resources", href: "/resources", hasDropdown: true },
 ];
 
-// Content for the "Services" mega menu
 const servicesLinks = [
   {
     id: 1,
@@ -222,13 +219,37 @@ const servicesLinks = [
   },
 ];
 
+const resultLinks = [
+  {
+    id: 7,
+    text: "Reviews",
+    href: "/client-reviews",
+    icon: IconLinkedInLead,
+  },
+  {
+    id: 8,
+    text: "Testimonials",
+    href: "/client-reviews",
+    icon: IconContentService,
+  },
+  {
+    id: 9,
+    text: "Case Studies",
+    href: "/services/white-label",
+    icon: IconWhiteLabel,
+  },
+  {
+    id: 10,
+    text: "Compare",
+    href: "/services/cold-email",
+    icon: IconColdEmail,
+  },
+];
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Stop background scroll when mobile menu is open
   useEffect(() => {
-    // This effect is not strictly needed for this menu type,
-    // but good to keep if your menu list becomes long.
     if (isOpen) {
       document.body.style.overflow = "hidden";
     } else {
@@ -240,11 +261,9 @@ const Navbar = () => {
   }, [isOpen]);
 
   return (
-    // nav is sticky, z-50 (on top), with a white background
     <nav className="sticky top-0 left-0 right-0 z-50 bg-white shadow-md font-geomanist">
       <div className="container mx-auto">
         <div className="flex justify-between items-center py-2">
-          {/* === Logo === */}
           <Link href={"/"} className="logo-wrapper">
             <Image
               src={"/images/logo.svg"}
@@ -254,12 +273,10 @@ const Navbar = () => {
             />
           </Link>
 
-          {/* === Centered Desktop Menu === */}
           <div className="hidden lg:flex flex-1 justify-center">
             <ul className="flex">
               {navLinks.map((link) => (
                 <li key={link.id} className="relative group">
-                  {/* --- THIS IS THE NEW "SERVICES" DROPDOWN --- */}
                   {link.id === 1 ? (
                     <>
                       <Link
@@ -267,10 +284,8 @@ const Navbar = () => {
                         className="nav-link  px-[12.8px]! py-3.5 flex items-center gap-1.5 transition-colors duration-200 rounded-[20px] group-hover:bg-[#4001ff] group-hover:text-white!"
                       >
                         {link.text}
-                        {/* <DropdownArrowIcon className="w-4 h-4 transition-transform group-hover:rotate-180" /> */}
                       </Link>
 
-                      {/* --- Mega Menu Dropdown Panel --- */}
                       <div
                         className="absolute top-full left-1/2 -translate-x-1/2 pt-4
                                    group-hover:block z-100
@@ -281,7 +296,6 @@ const Navbar = () => {
                                     w-max opacity-0 group-hover:opacity-100 p-8"
                         >
                           <div className="grid grid-cols-2 gap-x-12 divide-x divide-purple-200">
-                            {/* Column 1 */}
                             <div className="flex flex-col gap-6 pr-12">
                               {servicesLinks.slice(0, 3).map((service) => (
                                 <Link
@@ -296,7 +310,6 @@ const Navbar = () => {
                                 </Link>
                               ))}
                             </div>
-                            {/* Column 2 */}
                             <div className="flex flex-col gap-6 ">
                               {servicesLinks.slice(3, 6).map((service) => (
                                 <Link
@@ -315,8 +328,44 @@ const Navbar = () => {
                         </div>
                       </div>
                     </>
+                  ) : link.id === 2 ? (
+                    <>
+                      <Link
+                        href={link.href}
+                        className="nav-link px-[12.8px] py-3.5 flex items-center gap-1.5 transition-colors duration-200 rounded-[20px] group-hover:bg-[#4001ff] group-hover:text-white!"
+                      >
+                        {link.text}
+                      </Link>
+
+                      <div
+                        className="absolute top-full left-1/2 -translate-x-1/2 pt-4
+                                  hidden group-hover:block z-100
+                                  opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      >
+                        <div
+                          className="bg-linear-to-b from-[#f5f1ff] to-[#eae3ff] border-2 border-[#4001ff] rounded-2xl shadow-lg
+                                    w-max p-8"
+                        >
+                          <div className="grid grid-cols-1 gap-x-12">
+                            <div className="flex flex-col gap-6">
+                              {resultLinks.map((result) => (
+                                <Link
+                                  key={result.id}
+                                  href={result.href}
+                                  className="flex items-center gap-3 group/item text-[18px]"
+                                >
+                                  <result.icon className="w-6 h-6 text-[#4001ff] transition-colors" />
+                                  <span className="text-black font-medium group-hover/item:text-[#4001ff] transition-colors">
+                                    {result.text}
+                                  </span>
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </>
                   ) : (
-                    // --- Other Nav Links ---
                     <Link href={link.href} className="nav-link p-3.5">
                       {link.text}
                     </Link>
@@ -326,27 +375,20 @@ const Navbar = () => {
             </ul>
           </div>
 
-          {/* === Desktop Buttons === */}
           <div className="hidden lg:flex items-center gap-4">
             <button className="btn btn-primary">Free Consultation</button>
           </div>
 
-          {/* === Mobile Toggle Button === */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden flex items-center justify-center z-50 w-10 h-10"
             aria-label="Toggle menu"
           >
-            {/* This toggle logic is now correct.
-              When the menu slides down, the toggle is part of the
-              sticky nav, so it remains visible.
-            */}
             {isOpen ? <CloseIcon /> : <HamburgerIcon />}
           </button>
         </div>
       </div>
 
-      {/* === Mobile Menu (Slide-down from navbar) === */}
       <div
         className={`absolute top-full left-0 right-0 
                   bg-white shadow-lg 
@@ -359,7 +401,6 @@ const Navbar = () => {
                   }`}
       >
         <div className="container mx-auto">
-          {/* We use the styling from your image (white bg, etc.) */}
           <ul className="flex flex-col pb-6">
             {navLinks.map((link) => (
               <li key={link.id} className="border-b border-gray-200">
