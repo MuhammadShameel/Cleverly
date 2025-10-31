@@ -58,9 +58,9 @@
   }
 }
 
-.font-geomanist {
+/* .font-geomanist {
   font-family: var(--font-geomanist), sans-serif !important;
-}
+} */
 
 body {
   color: #333;
@@ -88,7 +88,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--heading-font) !important;
+  font-family: var(--font-geomanist), sans-serif !important;
   font-weight: 700;
 }
 
@@ -215,7 +215,7 @@ h4 {
   border-radius: 20px;
   padding: 18px 32px 17px;
   font-size: clamp(14px, 1.319vw, 19px);
-  font-weight: 700;
+  font-weight: 500;
   line-height: 26.6px;
   transition-property: all;
   transition-duration: 0.3s;
@@ -244,4 +244,24 @@ h4 {
 
 .marquee .swiper-wrapper {
   transition-timing-function: linear !important;
+}
+
+.video-container {
+  position: relative;
+  background: #000;
+  border-radius: 0.5rem;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition-property: color, background-color, border-color, transform,
+    box-shadow;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
