@@ -32,11 +32,11 @@ const Packages = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-6 py-6 my-10">
             <div className="flex flex-col items-center text-center  mx-auto p-12 bg-white rounded-lg">
-              <h3 className="mb-2 text-[#3f00ff] !font-bold">Silver</h3>
+              <h3 className="mb-2 text-[#3f00ff] font-bold!">Silver</h3>
               <span className="uppercase font-bold text-[16px] text-black">
                 LINKEDIN OUTREACH + Proven sales expert
               </span>
-              <div className="border-y-1 border-[#dbe1e9] w-full py-5 my-5">
+              <div className="border-y border-[#dbe1e9] w-full py-5 my-5">
                 <span className="text-2xl font-bold text-black">$397/mo</span>
               </div>
               <span className="uppercase text-[#3f00ff] font-bold">
@@ -65,11 +65,11 @@ const Packages = () => {
               </div>
             </div>
             <div className="flex flex-col items-center text-center  mx-auto p-12 bg-white rounded-lg">
-              <h3 className="mb-2 text-[#3f00ff] !font-bold">Gold</h3>
+              <h3 className="mb-2 text-[#3f00ff] font-bold!">Gold</h3>
               <span className="uppercase font-bold text-[16px] text-black">
                 LINKEDIN OUTREACH + Proven sales expert
               </span>
-              <div className="border-y-1 border-[#dbe1e9] w-full py-5 my-5">
+              <div className="border-y border-[#dbe1e9] w-full py-5 my-5">
                 <span className="text-2xl font-bold text-black">$697/mo</span>
               </div>
               <span className="uppercase text-[#3f00ff] font-bold">
@@ -98,11 +98,11 @@ const Packages = () => {
               </div>
             </div>
             <div className="flex flex-col items-center text-center  mx-auto p-12 bg-white rounded-lg">
-              <h3 className="mb-2 text-[#3f00ff] !font-bold">Platinum</h3>
+              <h3 className="mb-2 text-[#3f00ff] font-bold!">Platinum</h3>
               <span className="uppercase font-bold text-[16px] text-black">
                 LINKEDIN OUTREACH + Proven sales expert
               </span>
-              <div className="border-y-1 border-[#dbe1e9] w-full py-5 my-5">
+              <div className="border-y border-[#dbe1e9] w-full py-5 my-5">
                 <span className="text-2xl font-bold text-black">$997/mo</span>
               </div>
               <span className="uppercase text-[#3f00ff] font-bold">

@@ -235,7 +235,7 @@ const resultLinks = [
   {
     id: 9,
     text: "Case Studies",
-    href: "/services/white-label",
+    href: "/cleverly-case-studies",
     icon: IconWhiteLabel,
   },
   {
