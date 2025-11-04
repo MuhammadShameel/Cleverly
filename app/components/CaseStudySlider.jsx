@@ -6,7 +6,9 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 import Image from "next/image";
 
+import { projects } from "../data/caseStudiesData";
 import CaseStudyModal from "./CaseStudyModal";
+import CaseStudyCard from "./CaseStudyCard";
 import Stars from "../../public/images/blue-stars.svg";
 import Person from "../../public/images/profile.jpeg";
 import Search from "../..//public/images/search-icon.svg";
@@ -15,182 +17,182 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const projects = [
-  {
-    tag: "FULL PiPE",
-    category: "Saas",
-    tagTheme: "default", // For the purple/default text color
-    mainMetric: "41 meetings booked in 3 months",
-    secondaryMetric: "33%",
-    secondaryMetricLabel: "Reply Rate",
+// const projects = [
+//   {
+//     tag: "FULL PiPE",
+//     category: "Saas",
+//     tagTheme: "default", // For the purple/default text color
+//     mainMetric: "41 meetings booked in 3 months",
+//     secondaryMetric: "33%",
+//     secondaryMetricLabel: "Reply Rate",
 
-    author: {
-      image: Person, // Placeholder path
-      name: "Ali Rafie",
-      role: "Sales Director",
-    },
-    rating: null,
-    sections: [
-      {
-        id: "strategy-2",
-        icon: "strategy",
-        title: "Strategy",
-        text: "We focused our market approach on mid-market technology decision-makers, targeting CTOs and IT Directors at high-growth companies (50-1000 employees) showing clear digital transformation signals. We refined our targeting by identifying companies using legacy systems and those with recent funding, then addressed common vendor skepticism by leading with specific value metrics from similar customers (e.g., reduced processing time by 40%) and offering brief product demonstrations. This approach proved highly effective, resulting in a 15% outreach-to-demo conversion rate and 30% trial-to-paid conversion rate.",
-      },
-      {
-        id: "review-2",
-        icon: "review",
-        title: "Review",
-        text: "Great work on the last 2 months of campaigns! We have definitely seen an uptick in leads and closed clients. We should be closing another deal tomorrow!",
-      },
-    ],
-  },
-  {
-    tag: "FULL PiPE",
-    category: "Saas",
-    tagTheme: "default", // For the purple/default text color
-    mainMetric: "41 meetings booked in 3 months",
-    secondaryMetric: "33%",
-    secondaryMetricLabel: "Reply Rate",
+//     author: {
+//       image: Person, // Placeholder path
+//       name: "Ali Rafie",
+//       role: "Sales Director",
+//     },
+//     rating: null,
+//     sections: [
+//       {
+//         id: "strategy-2",
+//         icon: "strategy",
+//         title: "Strategy",
+//         text: "We focused our market approach on mid-market technology decision-makers, targeting CTOs and IT Directors at high-growth companies (50-1000 employees) showing clear digital transformation signals. We refined our targeting by identifying companies using legacy systems and those with recent funding, then addressed common vendor skepticism by leading with specific value metrics from similar customers (e.g., reduced processing time by 40%) and offering brief product demonstrations. This approach proved highly effective, resulting in a 15% outreach-to-demo conversion rate and 30% trial-to-paid conversion rate.",
+//       },
+//       {
+//         id: "review-2",
+//         icon: "review",
+//         title: "Review",
+//         text: "Great work on the last 2 months of campaigns! We have definitely seen an uptick in leads and closed clients. We should be closing another deal tomorrow!",
+//       },
+//     ],
+//   },
+//   {
+//     tag: "FULL PiPE",
+//     category: "Saas",
+//     tagTheme: "default", // For the purple/default text color
+//     mainMetric: "41 meetings booked in 3 months",
+//     secondaryMetric: "33%",
+//     secondaryMetricLabel: "Reply Rate",
 
-    author: {
-      image: Person, // Placeholder path
-      name: "Ali Rafie",
-      role: "Sales Director",
-    },
-    rating: null,
-    sections: [
-      {
-        id: "strategy-2",
-        icon: "strategy",
-        title: "Strategy",
-        text: "We focused our market approach on mid-market technology decision-makers, targeting CTOs and IT Directors at high-growth companies (50-1000 employees) showing clear digital transformation signals. We refined our targeting by identifying companies using legacy systems and those with recent funding, then addressed common vendor skepticism by leading with specific value metrics from similar customers (e.g., reduced processing time by 40%) and offering brief product demonstrations. This approach proved highly effective, resulting in a 15% outreach-to-demo conversion rate and 30% trial-to-paid conversion rate.",
-      },
-      {
-        id: "review-2",
-        icon: "review",
-        title: "Review",
-        text: "Great work on the last 2 months of campaigns! We have definitely seen an uptick in leads and closed clients. We should be closing another deal tomorrow!",
-      },
-    ],
-  },
-  {
-    tag: "FULL PiPE",
-    category: "Saas",
-    tagTheme: "default", // For the purple/default text color
-    mainMetric: "41 meetings booked in 3 months",
-    secondaryMetric: "33%",
-    secondaryMetricLabel: "Reply Rate",
+//     author: {
+//       image: Person, // Placeholder path
+//       name: "Ali Rafie",
+//       role: "Sales Director",
+//     },
+//     rating: null,
+//     sections: [
+//       {
+//         id: "strategy-2",
+//         icon: "strategy",
+//         title: "Strategy",
+//         text: "We focused our market approach on mid-market technology decision-makers, targeting CTOs and IT Directors at high-growth companies (50-1000 employees) showing clear digital transformation signals. We refined our targeting by identifying companies using legacy systems and those with recent funding, then addressed common vendor skepticism by leading with specific value metrics from similar customers (e.g., reduced processing time by 40%) and offering brief product demonstrations. This approach proved highly effective, resulting in a 15% outreach-to-demo conversion rate and 30% trial-to-paid conversion rate.",
+//       },
+//       {
+//         id: "review-2",
+//         icon: "review",
+//         title: "Review",
+//         text: "Great work on the last 2 months of campaigns! We have definitely seen an uptick in leads and closed clients. We should be closing another deal tomorrow!",
+//       },
+//     ],
+//   },
+//   {
+//     tag: "FULL PiPE",
+//     category: "Saas",
+//     tagTheme: "default", // For the purple/default text color
+//     mainMetric: "41 meetings booked in 3 months",
+//     secondaryMetric: "33%",
+//     secondaryMetricLabel: "Reply Rate",
 
-    author: {
-      image: Person, // Placeholder path
-      name: "Ali Rafie",
-      role: "Sales Director",
-    },
-    rating: null,
-    sections: [
-      {
-        id: "strategy-2",
-        icon: "strategy",
-        title: "Strategy",
-        text: "We focused our market approach on mid-market technology decision-makers, targeting CTOs and IT Directors at high-growth companies (50-1000 employees) showing clear digital transformation signals. We refined our targeting by identifying companies using legacy systems and those with recent funding, then addressed common vendor skepticism by leading with specific value metrics from similar customers (e.g., reduced processing time by 40%) and offering brief product demonstrations. This approach proved highly effective, resulting in a 15% outreach-to-demo conversion rate and 30% trial-to-paid conversion rate.",
-      },
-      {
-        id: "review-2",
-        icon: "review",
-        title: "Review",
-        text: "Great work on the last 2 months of campaigns! We have definitely seen an uptick in leads and closed clients. We should be closing another deal tomorrow!",
-      },
-    ],
-  },
-  {
-    tag: "FULL PiPE",
-    category: "Saas",
-    tagTheme: "default", // For the purple/default text color
-    mainMetric: "41 meetings booked in 3 months",
-    secondaryMetric: "33%",
-    secondaryMetricLabel: "Reply Rate",
+//     author: {
+//       image: Person, // Placeholder path
+//       name: "Ali Rafie",
+//       role: "Sales Director",
+//     },
+//     rating: null,
+//     sections: [
+//       {
+//         id: "strategy-2",
+//         icon: "strategy",
+//         title: "Strategy",
+//         text: "We focused our market approach on mid-market technology decision-makers, targeting CTOs and IT Directors at high-growth companies (50-1000 employees) showing clear digital transformation signals. We refined our targeting by identifying companies using legacy systems and those with recent funding, then addressed common vendor skepticism by leading with specific value metrics from similar customers (e.g., reduced processing time by 40%) and offering brief product demonstrations. This approach proved highly effective, resulting in a 15% outreach-to-demo conversion rate and 30% trial-to-paid conversion rate.",
+//       },
+//       {
+//         id: "review-2",
+//         icon: "review",
+//         title: "Review",
+//         text: "Great work on the last 2 months of campaigns! We have definitely seen an uptick in leads and closed clients. We should be closing another deal tomorrow!",
+//       },
+//     ],
+//   },
+//   {
+//     tag: "FULL PiPE",
+//     category: "Saas",
+//     tagTheme: "default", // For the purple/default text color
+//     mainMetric: "41 meetings booked in 3 months",
+//     secondaryMetric: "33%",
+//     secondaryMetricLabel: "Reply Rate",
 
-    author: {
-      image: Person, // Placeholder path
-      name: "Ali Rafie",
-      role: "Sales Director",
-    },
-    rating: null,
-    sections: [
-      {
-        id: "strategy-2",
-        icon: "strategy",
-        title: "Strategy",
-        text: "We focused our market approach on mid-market technology decision-makers, targeting CTOs and IT Directors at high-growth companies (50-1000 employees) showing clear digital transformation signals. We refined our targeting by identifying companies using legacy systems and those with recent funding, then addressed common vendor skepticism by leading with specific value metrics from similar customers (e.g., reduced processing time by 40%) and offering brief product demonstrations. This approach proved highly effective, resulting in a 15% outreach-to-demo conversion rate and 30% trial-to-paid conversion rate.",
-      },
-      {
-        id: "review-2",
-        icon: "review",
-        title: "Review",
-        text: "Great work on the last 2 months of campaigns! We have definitely seen an uptick in leads and closed clients. We should be closing another deal tomorrow!",
-      },
-    ],
-  },
-  {
-    tag: "FULL PiPE",
-    category: "Saas",
-    tagTheme: "default", // For the purple/default text color
-    mainMetric: "41 meetings booked in 3 months",
-    secondaryMetric: "33%",
-    secondaryMetricLabel: "Reply Rate",
+//     author: {
+//       image: Person, // Placeholder path
+//       name: "Ali Rafie",
+//       role: "Sales Director",
+//     },
+//     rating: null,
+//     sections: [
+//       {
+//         id: "strategy-2",
+//         icon: "strategy",
+//         title: "Strategy",
+//         text: "We focused our market approach on mid-market technology decision-makers, targeting CTOs and IT Directors at high-growth companies (50-1000 employees) showing clear digital transformation signals. We refined our targeting by identifying companies using legacy systems and those with recent funding, then addressed common vendor skepticism by leading with specific value metrics from similar customers (e.g., reduced processing time by 40%) and offering brief product demonstrations. This approach proved highly effective, resulting in a 15% outreach-to-demo conversion rate and 30% trial-to-paid conversion rate.",
+//       },
+//       {
+//         id: "review-2",
+//         icon: "review",
+//         title: "Review",
+//         text: "Great work on the last 2 months of campaigns! We have definitely seen an uptick in leads and closed clients. We should be closing another deal tomorrow!",
+//       },
+//     ],
+//   },
+//   {
+//     tag: "FULL PiPE",
+//     category: "Saas",
+//     tagTheme: "default", // For the purple/default text color
+//     mainMetric: "41 meetings booked in 3 months",
+//     secondaryMetric: "33%",
+//     secondaryMetricLabel: "Reply Rate",
 
-    author: {
-      image: Person, // Placeholder path
-      name: "Ali Rafie",
-      role: "Sales Director",
-    },
-    rating: null,
-    sections: [
-      {
-        id: "strategy-2",
-        icon: "strategy",
-        title: "Strategy",
-        text: "We focused our market approach on mid-market technology decision-makers, targeting CTOs and IT Directors at high-growth companies (50-1000 employees) showing clear digital transformation signals. We refined our targeting by identifying companies using legacy systems and those with recent funding, then addressed common vendor skepticism by leading with specific value metrics from similar customers (e.g., reduced processing time by 40%) and offering brief product demonstrations. This approach proved highly effective, resulting in a 15% outreach-to-demo conversion rate and 30% trial-to-paid conversion rate.",
-      },
-      {
-        id: "review-2",
-        icon: "review",
-        title: "Review",
-        text: "Great work on the last 2 months of campaigns! We have definitely seen an uptick in leads and closed clients. We should be closing another deal tomorrow!",
-      },
-    ],
-  },
-  {
-    tag: "FULL PiPE",
-    category: "Saas",
-    tagTheme: "default", // For the purple/default text color
-    mainMetric: "41 meetings booked in 3 months",
-    secondaryMetric: "33%",
-    secondaryMetricLabel: "Reply Rate",
+//     author: {
+//       image: Person, // Placeholder path
+//       name: "Ali Rafie",
+//       role: "Sales Director",
+//     },
+//     rating: null,
+//     sections: [
+//       {
+//         id: "strategy-2",
+//         icon: "strategy",
+//         title: "Strategy",
+//         text: "We focused our market approach on mid-market technology decision-makers, targeting CTOs and IT Directors at high-growth companies (50-1000 employees) showing clear digital transformation signals. We refined our targeting by identifying companies using legacy systems and those with recent funding, then addressed common vendor skepticism by leading with specific value metrics from similar customers (e.g., reduced processing time by 40%) and offering brief product demonstrations. This approach proved highly effective, resulting in a 15% outreach-to-demo conversion rate and 30% trial-to-paid conversion rate.",
+//       },
+//       {
+//         id: "review-2",
+//         icon: "review",
+//         title: "Review",
+//         text: "Great work on the last 2 months of campaigns! We have definitely seen an uptick in leads and closed clients. We should be closing another deal tomorrow!",
+//       },
+//     ],
+//   },
+//   {
+//     tag: "FULL PiPE",
+//     category: "Saas",
+//     tagTheme: "default", // For the purple/default text color
+//     mainMetric: "41 meetings booked in 3 months",
+//     secondaryMetric: "33%",
+//     secondaryMetricLabel: "Reply Rate",
 
-    author: {
-      image: Person, // Placeholder path
-      name: "Ali Rafie",
-      role: "Sales Director",
-    },
-    rating: null,
-    sections: [
-      {
-        id: "strategy-2",
-        icon: "strategy",
-        title: "Strategy",
-        text: "We focused our market approach on mid-market technology decision-makers, targeting CTOs and IT Directors at high-growth companies (50-1000 employees) showing clear digital transformation signals. We refined our targeting by identifying companies using legacy systems and those with recent funding, then addressed common vendor skepticism by leading with specific value metrics from similar customers (e.g., reduced processing time by 40%) and offering brief product demonstrations. This approach proved highly effective, resulting in a 15% outreach-to-demo conversion rate and 30% trial-to-paid conversion rate.",
-      },
-      {
-        id: "review-2",
-        icon: "review",
-        title: "Review",
-        text: "Great work on the last 2 months of campaigns! We have definitely seen an uptick in leads and closed clients. We should be closing another deal tomorrow!",
-      },
-    ],
-  },
-];
+//     author: {
+//       image: Person, // Placeholder path
+//       name: "Ali Rafie",
+//       role: "Sales Director",
+//     },
+//     rating: null,
+//     sections: [
+//       {
+//         id: "strategy-2",
+//         icon: "strategy",
+//         title: "Strategy",
+//         text: "We focused our market approach on mid-market technology decision-makers, targeting CTOs and IT Directors at high-growth companies (50-1000 employees) showing clear digital transformation signals. We refined our targeting by identifying companies using legacy systems and those with recent funding, then addressed common vendor skepticism by leading with specific value metrics from similar customers (e.g., reduced processing time by 40%) and offering brief product demonstrations. This approach proved highly effective, resulting in a 15% outreach-to-demo conversion rate and 30% trial-to-paid conversion rate.",
+//       },
+//       {
+//         id: "review-2",
+//         icon: "review",
+//         title: "Review",
+//         text: "Great work on the last 2 months of campaigns! We have definitely seen an uptick in leads and closed clients. We should be closing another deal tomorrow!",
+//       },
+//     ],
+//   },
+// ];
 
 const CaseStudySlider = () => {
   const [selectedStudy, setSelectedStudy] = useState(null);
@@ -199,6 +201,13 @@ const CaseStudySlider = () => {
 
   const handlePrev = () => swiper?.slidePrev();
   const handleNext = () => swiper?.slideNext();
+
+  const handleShowMore = (project, section) => {
+    setSelectedStudy({
+      ...project,
+      _section: section,
+    });
+  };
 
   return (
     <>
@@ -257,7 +266,7 @@ const CaseStudySlider = () => {
               >
                 {projects.map((project, index) => (
                   <SwiperSlide key={index}>
-                    <div className="slider-card bg-[#fbfaff] rounded-lg h-full flex flex-col mt-12">
+                    {/* <div className="slider-card bg-[#fbfaff] rounded-lg h-full flex flex-col mt-12">
                       <div className="flex">
                         <div className="swiper-left-content lg:w-2/4 w-full p-[30px]">
                           <div className="font-semibold uppercase">
@@ -363,7 +372,11 @@ const CaseStudySlider = () => {
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
+                    <CaseStudyCard
+                      project={project}
+                      onShowMore={handleShowMore}
+                    />
                   </SwiperSlide>
                 ))}
               </Swiper>
